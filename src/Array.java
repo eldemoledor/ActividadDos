@@ -14,6 +14,12 @@ acuerdo a la siguiente tabla (Recibe como parámetro el promedio y regresa un ca
 import java.util.Scanner;
 
 public class Array {
+
+    public static void main (String[] args){
+
+
+    }
+
     public void cargarValores(){
         /**Obtención de datos**/
         Scanner teclado = new Scanner(System.in);
@@ -36,24 +42,24 @@ public class Array {
         int sumCalif = calif1 + calif2 + calif3 + calif4 + calif5;
         int sumCalif1 = sumCalif;
         float prom=sumCalif1/5;
-        float arregloCalf = prom;
+        //float arregloCalf = prom;
         return (int) prom;
     }
-    public void arregloCalif(int promedio){
-        String[] calificaciones = {"F","E","D","C","B","A"};
-
-
-    }
-
-    public static void main (String[] args){
-
-
-
-
-
-
-
-
-
+    public static String caalifFinal(int promedio){
+        String rLetra;
+        if (promedio <= 50){
+            rLetra = "F";
+        }else if (promedio <=60 ){
+            rLetra= "E";
+        }else  if (promedio<=70){
+            rLetra = "D";
+        }else if (promedio <=80){
+            rLetra = "C";
+        }else if (promedio <=90){
+            rLetra= "B";
+        }else{
+            rLetra = "A";
+        }
+        return rLetra;
     }
 }
