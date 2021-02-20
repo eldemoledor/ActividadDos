@@ -14,17 +14,39 @@ acuerdo a la siguiente tabla (Recibe como parámetro el promedio y regresa un ca
 import java.util.Scanner;
 
 public class Array {
+        private Scanner teclado;
+        private String nombre;
+        private int[] calif;
+        private float promedio;
+        private float sumaCalif;
 
-    public static void main (String[] args){
 
+    //Inicia Captura de Datos
+    public void capturaDatos(){
+        teclado = new Scanner(System.in);
+        calif = new int [5];
 
+        System.out.print("Ingrese el nombre del alumno: ");
+        nombre = teclado.next();
+        for (int i =0; i<=calif.length; i++){
+            System.out.print("Ingrese la calficacion "+ i + ": "+calif[i]);
+            calif[i] = teclado.nextInt();
+            sumaCalif+=calif[i];
+            promedio = sumaCalif/calif[i];
+        }
+    } //Fin captura de Datos.
+
+    //Impresión de datos.
+    public float imprimirDatos(int calif){
+
+        return 0;
     }
 
-    public void cargarValores(){
-        /**Obtención de datos**/
+
+    //public int cargarValores(){
+        /**Obtención de datos*
         Scanner teclado = new Scanner(System.in);
-        System.out.print("Ingrese nombre del Alumno: ");
-        String nombre = teclado.toString();
+        int calif[]
         System.out.print ("Ingrese Primer Calificación: ");
         int c1 = teclado.nextInt();
         System.out.print("Ingrese la Segunda Calificación: ");
@@ -61,5 +83,12 @@ public class Array {
             rLetra = "A";
         }
         return rLetra;
+    }**/
+
+    public static void main (String[] args){
+        System.out.print("Ingrese nombre del Alumno: ");
+
+
     }
+
 }
